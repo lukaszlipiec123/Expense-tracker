@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<center><h1>Adding New Expense</h1></center>
+<center><h3>On this page form with adding new expense/income</h3></center>
+<center>
+{% if error %}
+{{ error }}
+<br />
+<br />
+{% endif %}
+<h1>Create</h1>
+
+<form method="POST" action="{% url 'new_expense' %}" enctype="multipart/form-data">
+{% csrf_token %}
+Title:
+<br />
+<input type="text" name="title"/>
+<br />
+Value:
+<br />
+<input type="textbox" name="value"/>
+<br />
+<br />
+<input class="btn btn-primary" type="submit" value="Add Expense"/>
+</form>
+</center>
+{% endblock %}
