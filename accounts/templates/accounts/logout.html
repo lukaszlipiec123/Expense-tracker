@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+<center><h1>Logged out!</h1></center>
+
+<center>
+{% if error %}
+{{ error }}
+<br/>
+<br/>
+{% endif %}
+</center>
+{% endblock %}
